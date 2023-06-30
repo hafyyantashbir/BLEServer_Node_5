@@ -164,9 +164,9 @@ void setup() {
   Serial.println(" || RSSI NODE 4 : " + String(NODE_4_RSSI));
 
   
-  Serial.println("Tunggu 10 detik");
+  Serial.println("Tunggu 5 detik");
   Serial.println(datakirim);
-  delay(10000);
+  delay(5000);
   char kirim_setup[datakirim.length() + 1];
   datakirim.toCharArray(kirim_setup,sizeof(kirim_setup));
   
