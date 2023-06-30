@@ -1,5 +1,9 @@
 #include <Arduino.h>
 
+//library RTC
+#include <Wire.h>
+#include "RTClib.h"
+
 //library Json
 #include <ArduinoJson.h>
 
@@ -14,6 +18,10 @@
 #include <BLEUtils.h>
 #include <BLEServer.h>
 #include <BLEAdvertisedDevice.h>
+
+//konfigurasi BLE
+RTC_DS3231 rtc;
+char days[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
 //konfigurasi BLE
 #define SERVICE_UUID "0268a775-7fcf-4ff8-8c71-0f5294a48f83"
@@ -120,6 +128,13 @@ void setup() {
 
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
+
+  if (! rtc.begin()) {
+    Serial.println("Could not find RTC! Check circuit.");
+    while (1);
+  }
+  DateTime now = rtc.now();
+  
   while (!Serial) {
     // some boards need this because of native USB capability
   }
@@ -178,6 +193,8 @@ void setup() {
       if(!NODE_1){
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
+      }else{
+        Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }
@@ -188,6 +205,8 @@ void setup() {
       if(!NODE_2){
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
+      }else{
+        Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }
@@ -198,6 +217,8 @@ void setup() {
       if(!NODE_3){
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
+      }else{
+        Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }
@@ -208,6 +229,8 @@ void setup() {
       if(!NODE_4){
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
+      }else{
+        Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }
@@ -217,6 +240,7 @@ void setup() {
 
 void loop() {
   network.update();  // Check the network regularly
+  DateTime now = rtc.now();
   StaticJsonDocument<512> doc;
 
   //scan ble
@@ -362,24 +386,52 @@ void loop() {
         RF24NetworkHeader header(/*to node*/ NODE_1);
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+        if(!NODE_1){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_2_RSSI < NODE_1_RSSI && NODE_2_RSSI < NODE_3_RSSI && NODE_2_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_2);
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+        if(!NODE_2){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_3_RSSI < NODE_1_RSSI && NODE_3_RSSI < NODE_2_RSSI && NODE_3_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_3);
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+        if(!NODE_3){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_4_RSSI < NODE_1_RSSI && NODE_4_RSSI < NODE_2_RSSI && NODE_4_RSSI < NODE_3_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_4);
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+        if(!NODE_4){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
     }
     if (NodeID_3 == 3) {
@@ -388,24 +440,52 @@ void loop() {
         RF24NetworkHeader header(/*to node*/ NODE_1);
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+        if(!NODE_1){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_2_RSSI < NODE_1_RSSI && NODE_2_RSSI < NODE_3_RSSI && NODE_2_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_2);
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+        if(!NODE_2){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_3_RSSI < NODE_1_RSSI && NODE_3_RSSI < NODE_2_RSSI && NODE_3_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_3);
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+        if(!NODE_3){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_4_RSSI < NODE_1_RSSI && NODE_4_RSSI < NODE_2_RSSI && NODE_4_RSSI < NODE_3_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_4);
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+        if(!NODE_4){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
     }
     if (NodeID_3 == 2) {
@@ -414,24 +494,52 @@ void loop() {
         RF24NetworkHeader header(/*to node*/ NODE_1);
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+        if(!NODE_1){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_2_RSSI < NODE_1_RSSI && NODE_2_RSSI < NODE_3_RSSI && NODE_2_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_2);
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+        if(!NODE_2){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_3_RSSI < NODE_1_RSSI && NODE_3_RSSI < NODE_2_RSSI && NODE_3_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_3);
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+        if(!NODE_3){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_4_RSSI < NODE_1_RSSI && NODE_4_RSSI < NODE_2_RSSI && NODE_4_RSSI < NODE_3_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_4);
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+        if(!NODE_4){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
     }
     if (NodeID_3 == 1) {
@@ -440,24 +548,52 @@ void loop() {
         RF24NetworkHeader header(/*to node*/ NODE_1);
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+        if(!NODE_1){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_2_RSSI < NODE_1_RSSI && NODE_2_RSSI < NODE_3_RSSI && NODE_2_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_2);
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+        if(!NODE_2){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_3_RSSI < NODE_1_RSSI && NODE_3_RSSI < NODE_2_RSSI && NODE_3_RSSI < NODE_4_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_3);
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+        if(!NODE_3){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
       if (NODE_4_RSSI < NODE_1_RSSI && NODE_4_RSSI < NODE_2_RSSI && NODE_4_RSSI < NODE_3_RSSI) {
         network.update();
         RF24NetworkHeader header(/*to node*/ NODE_4);
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+        if(!NODE_4){
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(100);
+        }else{
+          Serial.println("Unixtime : "+String(now.unixtime()));
+        }
+        digitalWrite(LED_BUILTIN, LOW);
       }
     }
   }
