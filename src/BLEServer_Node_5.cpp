@@ -34,11 +34,11 @@ uint8_t dataBuffer[MAX_PAYLOAD_SIZE];
 #define LED_BUILTIN 2
 
 //alamat node
-const uint16_t this_node = 04;   // alamat node ini (NODE_5) dalam format Octal
-const uint16_t NODE_1 = 00;  // Alamat NODE_1 dalam format Octal
-const uint16_t NODE_2 = 01; // Alamat NODE_2 dalam format Octal
-const uint16_t NODE_3 = 02; // Alamat NODE_3 dalam format Octal
-const uint16_t NODE_4 = 03; // Alamat NODE_4 dalam format Octal
+const uint16_t this_node = 00;   // alamat node ini (NODE_5) dalam format Octal (master harus 00)
+const uint16_t NODE_1 = 01;  // Alamat NODE_1 dalam format Octal
+const uint16_t NODE_2 = 02; // Alamat NODE_2 dalam format Octal
+const uint16_t NODE_3 = 03; // Alamat NODE_3 dalam format Octal
+const uint16_t NODE_4 = 04; // Alamat NODE_4 dalam format Octal
 
 //variabel DATA
 int node_asal = 5;
