@@ -296,11 +296,11 @@ void loop() {
       uint32_t Unixtime2_0 = parsing_0["Unixtime"];
       Serial.println("Node ID : " + String(NodeID_0) + "Berat : " + String(Berat_0) + "Timestamp : " + String(Unixtime2_0));
     } else if (NodeID_0 == 3) {
-      int Pitch_0 = parsing_0["Pitch"];
-      int Roll_0 = parsing_0["Roll"];
-      int Frekuensi_0 = parsing_0["Frekuensi"];
+      int usX_0 = parsing_0["usX"];
+      int usY_0 = parsing_0["usY"];
+      int usZ_0 = parsing_0["usZ"];
       uint32_t Unixtime3_0 = parsing_0["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_0) + "Pitch : " + String(Pitch_0) + "Roll : " + String(Roll_0) + "Frekuensi : " + String(Frekuensi_0) + "Timestamp : " + String(Unixtime3_0));
+      Serial.println("Node ID : " + String(NodeID_0) + "usX : " + String(usX_0) + "usY : " + String(usY_0) + "usZ : " + String(usZ_0) + "Timestamp : " + String(Unixtime3_0));
     } else if (NodeID_0 == 4) {
       int TofX_0 = parsing_0["TofX"];
       int TofY_0 = parsing_0["TofY"];
@@ -321,11 +321,11 @@ void loop() {
       uint32_t Unixtime2_1 = parsing_1["Unixtime"];
       Serial.println("Node ID : " + String(NodeID_1) + "Berat : " + String(Berat_1) + "Timestamp : " + String(Unixtime2_1));
     } else if (NodeID_1 == 3) {
-      int Pitch_1 = parsing_1["Pitch"];
-      int Roll_1 = parsing_1["Roll"];
-      int Frekuensi_1 = parsing_1["Frekuensi"];
+      int usX_1 = parsing_1["usX"];
+      int usY_1 = parsing_1["usY"];
+      int usZ_1 = parsing_1["usZ"];
       uint32_t Unixtime3_1 = parsing_1["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_1) + "Pitch : " + String(Pitch_1) + "Roll : " + String(Roll_1) + "Frekuensi : " + String(Frekuensi_1) + "Timestamp : " + String(Unixtime3_1));
+      Serial.println("Node ID : " + String(NodeID_1) + "usX : " + String(usX_1) + "usY : " + String(usY_1) + "usZ : " + String(usZ_1) + "Timestamp : " + String(Unixtime3_1));
     } else if (NodeID_1 == 4) {
       int TofX_1 = parsing_1["TofX"];
       int TofY_1 = parsing_1["TofY"];
@@ -346,11 +346,11 @@ void loop() {
       uint32_t Unixtime2_2= parsing_2["Unixtime"];
       Serial.println("Node ID : " + String(NodeID_2) + "Berat : " + String(Berat_2) + "Timestamp : " + String(Unixtime2_2));
     } else if (NodeID_2 == 3) {
-      int Pitch_2 = parsing_2["Pitch"];
-      int Roll_2 = parsing_2["Roll"];
-      int Frekuensi_2 = parsing_2["Frekuensi"];
+      int usX_2 = parsing_2["usX"];
+      int usY_2 = parsing_2["usY"];
+      int usZ_2 = parsing_2["usZ"];
       uint32_t Unixtime3_2 = parsing_2["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_2) + "Pitch : " + String(Pitch_2) + "Roll : " + String(Roll_2) + "Frekuensi : " + String(Frekuensi_2) + "Timestamp : " + String(Unixtime3_2));
+      Serial.println("Node ID : " + String(NodeID_2) + "usX : " + String(usX_2) + "usY : " + String(usY_2) + "usZ : " + String(usZ_2) + "Timestamp : " + String(Unixtime3_2));
     } else if (NodeID_2 == 4) {
       int TofX_2 = parsing_2["TofX"];
       int TofY_2 = parsing_2["TofY"];
@@ -371,11 +371,11 @@ void loop() {
       uint32_t Unixtime2_3 = parsing_3["Unixtime"];
       Serial.println("Node ID : " + String(NodeID_3) + "Berat : " + String(Berat_3) + "Timestamp : " + String(Unixtime2_3));
     } else if (NodeID_3 == 3) {
-      int Pitch_3 = parsing_3["Pitch"];
-      int Roll_3 = parsing_3["Roll"];
-      int Frekuensi_3 = parsing_3["Frekuensi"];
+      int usX_3 = parsing_3["usX"];
+      int usY_3 = parsing_3["usY"];
+      int usZ_3 = parsing_3["usZ"];
       uint32_t Unixtime3_3 = parsing_3["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_3) + "Pitch : " + String(Pitch_3) + "Roll : " + String(Roll_3) + "Frekuensi : " + String(Frekuensi_3) + "Timestamp : " + String(Unixtime3_3));
+      Serial.println("Node ID : " + String(NodeID_3) + "usX : " + String(usX_3) + "usY : " + String(usY_3) + "usZ : " + String(usZ_3) + "Timestamp : " + String(Unixtime3_3));
     } else if (NodeID_3 == 4) {
       int TofX_3 = parsing_3["TofX"];
       int TofY_3 = parsing_3["TofY"];
