@@ -290,23 +290,23 @@ void loop() {
       int Suhu_0 = parsing_0["Suhu"];
       int Kelembapan_0 = parsing_0["Kelembapan"];
       uint32_t Unixtime1_0 = parsing_0["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_0) + "Suhu : " + String(Suhu_0) + "Kelembapan : " + String(Kelembapan_0) + "Timestamp : " + String(Unixtime1_0));
+      Serial.println("Node ID : " + String(NodeID_0) + " Suhu : " + String(Suhu_0) + " Kelembapan : " + String(Kelembapan_0) + " Timestamp : " + String(Unixtime1_0));
     } else if (NodeID_0 == 2) {
       int Berat_0 = parsing_0["Berat"];
       uint32_t Unixtime2_0 = parsing_0["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_0) + "Berat : " + String(Berat_0) + "Timestamp : " + String(Unixtime2_0));
+      Serial.println("Node ID : " + String(NodeID_0) + " Berat : " + String(Berat_0) + " Timestamp : " + String(Unixtime2_0));
     } else if (NodeID_0 == 3) {
       int usX_0 = parsing_0["usX"];
       int usY_0 = parsing_0["usY"];
       int usZ_0 = parsing_0["usZ"];
       uint32_t Unixtime3_0 = parsing_0["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_0) + "usX : " + String(usX_0) + "usY : " + String(usY_0) + "usZ : " + String(usZ_0) + "Timestamp : " + String(Unixtime3_0));
+      Serial.println("Node ID : " + String(NodeID_0) + " usX : " + String(usX_0) + " usY : " + String(usY_0) + " usZ : " + String(usZ_0) + " Timestamp : " + String(Unixtime3_0));
     } else if (NodeID_0 == 4) {
       int TofX_0 = parsing_0["TofX"];
       int TofY_0 = parsing_0["TofY"];
       int TofZ_0 = parsing_0["TofZ"];
       uint32_t Unixtime4_0 = parsing_0["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_0) + "ToF X : " + String(TofX_0) + "ToF Y :" + String(TofY_0) + "ToF Z : " + String(TofZ_0) + "Timestamp : " + String(Unixtime4_0));
+      Serial.println("Node ID : " + String(NodeID_0) + " ToF X : " + String(TofX_0) + " ToF Y :" + String(TofY_0) + " ToF Z : " + String(TofZ_0) + " Timestamp : " + String(Unixtime4_0));
     }
     //doc Array index 1
     JsonObject parsing_1 = doc[1];
@@ -315,23 +315,23 @@ void loop() {
       int Suhu_1 = parsing_1["Suhu"];
       int Kelembapan_1 = parsing_1["Kelembapan"];
       uint32_t Unixtime1_1 = parsing_0["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_1) + "Suhu : " + String(Suhu_1) + "Kelembapan : " + String(Kelembapan_1) + "Timestamp : " + String(Unixtime1_1));
+      Serial.println("Node ID : " + String(NodeID_1) + " Suhu : " + String(Suhu_1) + " Kelembapan : " + String(Kelembapan_1) + " Timestamp : " + String(Unixtime1_1));
     } else if (NodeID_1 == 2) {
       int Berat_1 = parsing_1["Berat"];
       uint32_t Unixtime2_1 = parsing_1["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_1) + "Berat : " + String(Berat_1) + "Timestamp : " + String(Unixtime2_1));
+      Serial.println("Node ID : " + String(NodeID_1) + " Berat : " + String(Berat_1) + " Timestamp : " + String(Unixtime2_1));
     } else if (NodeID_1 == 3) {
       int usX_1 = parsing_1["usX"];
       int usY_1 = parsing_1["usY"];
       int usZ_1 = parsing_1["usZ"];
       uint32_t Unixtime3_1 = parsing_1["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_1) + "usX : " + String(usX_1) + "usY : " + String(usY_1) + "usZ : " + String(usZ_1) + "Timestamp : " + String(Unixtime3_1));
+      Serial.println("Node ID : " + String(NodeID_1) + " usX : " + String(usX_1) + " usY : " + String(usY_1) + " usZ : " + String(usZ_1) + " Timestamp : " + String(Unixtime3_1));
     } else if (NodeID_1 == 4) {
       int TofX_1 = parsing_1["TofX"];
       int TofY_1 = parsing_1["TofY"];
       int TofZ_1 = parsing_1["TofZ"];
       uint32_t Unixtime4_1 = parsing_1["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_1) + "ToF X : " + String(TofX_1) + "ToF Y :" + String(TofY_1) + "ToF Z : " + String(TofZ_1)) + "Timestamp : " + String(Unixtime4_1);
+      Serial.println("Node ID : " + String(NodeID_1) + " ToF X : " + String(TofX_1) + " ToF Y :" + String(TofY_1) + " ToF Z : " + String(TofZ_1)) + " Timestamp : " + String(Unixtime4_1);
     }
     //doc Array index 2
     JsonObject parsing_2 = doc[2];
@@ -340,23 +340,23 @@ void loop() {
       int Suhu_2 = parsing_2["Suhu"];
       int Kelembapan_2 = parsing_2["Kelembapan"];
       uint32_t Unixtime1_2 = parsing_2["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_2) + "Suhu : " + String(Suhu_2) + "Kelembapan : " + String(Kelembapan_2) + "Timestamp : " + String(Unixtime1_2));
+      Serial.println("Node ID : " + String(NodeID_2) + " Suhu : " + String(Suhu_2) + " Kelembapan : " + String(Kelembapan_2) + " Timestamp : " + String(Unixtime1_2));
     } else if (NodeID_2 == 2) {
       int Berat_2 = parsing_2["Berat"];
       uint32_t Unixtime2_2= parsing_2["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_2) + "Berat : " + String(Berat_2) + "Timestamp : " + String(Unixtime2_2));
+      Serial.println("Node ID : " + String(NodeID_2) + " Berat : " + String(Berat_2) + " Timestamp : " + String(Unixtime2_2));
     } else if (NodeID_2 == 3) {
       int usX_2 = parsing_2["usX"];
       int usY_2 = parsing_2["usY"];
       int usZ_2 = parsing_2["usZ"];
       uint32_t Unixtime3_2 = parsing_2["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_2) + "usX : " + String(usX_2) + "usY : " + String(usY_2) + "usZ : " + String(usZ_2) + "Timestamp : " + String(Unixtime3_2));
+      Serial.println("Node ID : " + String(NodeID_2) + " usX : " + String(usX_2) + " usY : " + String(usY_2) + " usZ : " + String(usZ_2) + " Timestamp : " + String(Unixtime3_2));
     } else if (NodeID_2 == 4) {
       int TofX_2 = parsing_2["TofX"];
       int TofY_2 = parsing_2["TofY"];
       int TofZ_2 = parsing_2["TofZ"];
       uint32_t Unixtime4_2 = parsing_2["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_2) + "ToF X : " + String(TofX_2) + "ToF Y :" + String(TofY_2) + "ToF Z : " + String(TofZ_2) + "Timestamp : " + String(Unixtime4_2));
+      Serial.println("Node ID : " + String(NodeID_2) + " ToF X : " + String(TofX_2) + " ToF Y :" + String(TofY_2) + " ToF Z : " + String(TofZ_2) + " Timestamp : " + String(Unixtime4_2));
     }
     //doc Array index 3
     JsonObject parsing_3 = doc[3];
@@ -365,23 +365,23 @@ void loop() {
       int Suhu_3 = parsing_3["Suhu"];
       int Kelembapan_3 = parsing_3["Kelembapan"];
       uint32_t Unixtime1_3 = parsing_3["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_3) + "Suhu : " + String(Suhu_3) + "Kelembapan : " + String(Kelembapan_3) + "Timestamp : " + String(Unixtime1_3));
+      Serial.println("Node ID : " + String(NodeID_3) + " Suhu : " + String(Suhu_3) + " Kelembapan : " + String(Kelembapan_3) + " Timestamp : " + String(Unixtime1_3));
     } else if (NodeID_3 == 2) {
       int Berat_3 = parsing_3["Berat"];
       uint32_t Unixtime2_3 = parsing_3["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_3) + "Berat : " + String(Berat_3) + "Timestamp : " + String(Unixtime2_3));
+      Serial.println("Node ID : " + String(NodeID_3) + " Berat : " + String(Berat_3) + " Timestamp : " + String(Unixtime2_3));
     } else if (NodeID_3 == 3) {
       int usX_3 = parsing_3["usX"];
       int usY_3 = parsing_3["usY"];
       int usZ_3 = parsing_3["usZ"];
       uint32_t Unixtime3_3 = parsing_3["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_3) + "usX : " + String(usX_3) + "usY : " + String(usY_3) + "usZ : " + String(usZ_3) + "Timestamp : " + String(Unixtime3_3));
+      Serial.println("Node ID : " + String(NodeID_3) + " usX : " + String(usX_3) + " usY : " + String(usY_3) + " usZ : " + String(usZ_3) + " Timestamp : " + String(Unixtime3_3));
     } else if (NodeID_3 == 4) {
       int TofX_3 = parsing_3["TofX"];
       int TofY_3 = parsing_3["TofY"];
       int TofZ_3 = parsing_3["TofZ"];
       uint32_t Unixtime4_3 = parsing_3["Unixtime"];
-      Serial.println("Node ID : " + String(NodeID_3) + "ToF X : " + String(TofX_3) + "ToF Y :" + String(TofY_3) + "ToF Z : " + String(TofZ_3) + "Timestamp : " + String(Unixtime4_3));
+      Serial.println("Node ID : " + String(NodeID_3) + " ToF X : " + String(TofX_3) + " ToF Y :" + String(TofY_3) + " ToF Z : " + String(TofZ_3) + " Timestamp : " + String(Unixtime4_3));
     }
     Serial.println("Jalur Pengiriman Data : ");
     for (int i = 0; i <= 4; i++) {
