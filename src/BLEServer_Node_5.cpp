@@ -383,11 +383,12 @@ void loop() {
       uint32_t Unixtime4_3 = parsing_3["Unixtime"];
       Serial.println("Node ID : " + String(NodeID_3) + " ToF X : " + String(TofX_3) + " ToF Y :" + String(TofY_3) + " ToF Z : " + String(TofZ_3) + " Timestamp : " + String(Unixtime4_3));
     }
-    Serial.println("Jalur Pengiriman Data : ");
+    Serial.print("Jalur Pengiriman Data : ");
     for (int i = 0; i <= 4; i++) {
       Serial.print(jumlahnode[i]);
       Serial.print(",");
     }
+    Serial.println("");
 //==================================================MODE PENGIRIMAN DATA==================================================
     delay(1000);
     BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
