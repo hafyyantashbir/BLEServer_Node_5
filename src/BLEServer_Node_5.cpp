@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
 //library RTC
-#include <Wire.h>
-#include "RTClib.h"
+// #include <Wire.h>
+// #include "RTClib.h"
 
 //library Json
 #include <ArduinoJson.h>
@@ -20,8 +20,8 @@
 #include <BLEAdvertisedDevice.h>
 
 //konfigurasi BLE
-RTC_DS3231 rtc;
-char days[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+// RTC_DS3231 rtc;
+// char days[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
 //konfigurasi BLE
 #define SERVICE_UUID "0268a775-7fcf-4ff8-8c71-0f5294a48f83"
@@ -129,11 +129,11 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
 
-  if (! rtc.begin()) {
-    Serial.println("Could not find RTC! Check circuit.");
-    while (1);
-  }
-  DateTime now = rtc.now();
+  // if (! rtc.begin()) {
+  //   Serial.println("Could not find RTC! Check circuit.");
+  //   while (1);
+  // }
+  // DateTime now = rtc.now();
   
   while (!Serial) {
     // some boards need this because of native USB capability
@@ -194,7 +194,7 @@ void setup() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
       }else{
-        Serial.println("Unixtime : "+String(now.unixtime()));
+        // //Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }else if (NODE_2_RSSI <= NODE_1_RSSI && NODE_2_RSSI <= NODE_3_RSSI && NODE_2_RSSI <= NODE_4_RSSI) {
@@ -205,7 +205,7 @@ void setup() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
       }else{
-        Serial.println("Unixtime : "+String(now.unixtime()));
+        // //Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }else if (NODE_3_RSSI <= NODE_1_RSSI && NODE_3_RSSI <= NODE_2_RSSI && NODE_3_RSSI <= NODE_4_RSSI) {
@@ -216,7 +216,7 @@ void setup() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
       }else{
-        Serial.println("Unixtime : "+String(now.unixtime()));
+        // //Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }else if (NODE_4_RSSI <= NODE_1_RSSI && NODE_4_RSSI <= NODE_2_RSSI && NODE_4_RSSI <= NODE_3_RSSI) {
@@ -227,7 +227,7 @@ void setup() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
       }else{
-        Serial.println("Unixtime : "+String(now.unixtime()));
+        // //Serial.println("Unixtime : "+String(now.unixtime()));
       }
       digitalWrite(LED_BUILTIN, LOW);
     }
@@ -237,7 +237,7 @@ void setup() {
 
 void loop() {
   network.update();  // Check the network regularly
-  DateTime now = rtc.now();
+  // DateTime now = rtc.now();
   StaticJsonDocument<512> doc;
 
   //scan ble
@@ -404,7 +404,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_2_RSSI <= NODE_1_RSSI && NODE_2_RSSI <= NODE_3_RSSI && NODE_2_RSSI <= NODE_4_RSSI) {
@@ -416,7 +416,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_3_RSSI <= NODE_1_RSSI && NODE_3_RSSI <= NODE_2_RSSI && NODE_3_RSSI <= NODE_4_RSSI) {
@@ -428,7 +428,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_4_RSSI <= NODE_1_RSSI && NODE_4_RSSI <= NODE_2_RSSI && NODE_4_RSSI <= NODE_3_RSSI) {
@@ -440,7 +440,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }
@@ -455,7 +455,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_2_RSSI <= NODE_1_RSSI && NODE_2_RSSI <= NODE_3_RSSI && NODE_2_RSSI <= NODE_4_RSSI) {
@@ -467,7 +467,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_3_RSSI <= NODE_1_RSSI && NODE_3_RSSI <= NODE_2_RSSI && NODE_3_RSSI <= NODE_4_RSSI) {
@@ -479,7 +479,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_4_RSSI <= NODE_1_RSSI && NODE_4_RSSI <= NODE_2_RSSI && NODE_4_RSSI <= NODE_3_RSSI) {
@@ -491,7 +491,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }
@@ -506,7 +506,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_2_RSSI <= NODE_1_RSSI && NODE_2_RSSI <= NODE_3_RSSI && NODE_2_RSSI <= NODE_4_RSSI) {
@@ -518,7 +518,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_3_RSSI <= NODE_1_RSSI && NODE_3_RSSI <= NODE_2_RSSI && NODE_3_RSSI <= NODE_4_RSSI) {
@@ -530,7 +530,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_4_RSSI <= NODE_1_RSSI && NODE_4_RSSI <= NODE_2_RSSI && NODE_4_RSSI <= NODE_3_RSSI) {
@@ -542,7 +542,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }
@@ -557,7 +557,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_2_RSSI <= NODE_1_RSSI && NODE_2_RSSI <= NODE_3_RSSI && NODE_2_RSSI <= NODE_4_RSSI) {
@@ -569,7 +569,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_3_RSSI <= NODE_1_RSSI && NODE_3_RSSI <= NODE_2_RSSI && NODE_3_RSSI <= NODE_4_RSSI) {
@@ -581,7 +581,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }else if (NODE_4_RSSI <= NODE_1_RSSI && NODE_4_RSSI <= NODE_2_RSSI && NODE_4_RSSI <= NODE_3_RSSI) {
@@ -593,7 +593,7 @@ void loop() {
         digitalWrite(LED_BUILTIN, HIGH);
         delay(100);
         }else{
-          Serial.println("Unixtime : "+String(now.unixtime()));
+          //Serial.println("Unixtime : "+String(now.unixtime()));
         }
         digitalWrite(LED_BUILTIN, LOW);
       }
