@@ -2470,6 +2470,62 @@ void loop() {
         digitalWrite(LED_BUILTIN, LOW);
       }
     }
+    //==================================================POSISI NODE KE - 5==================================================  
+    if( count == 4){
+      Serial.print("Received packet from NODE " + jumlahnode[3]);
+      if(jumlahnode[0] == 1 && jumlahnode[1] == 2 && jumlahnode[2] == 3 && jumlahnode[3] == 4){
+        JsonObject NodeID_1 = doc[0];
+        int fNodeID_1 = NodeID_1["NodeID"];
+        int Suhu = NodeID_1["Suhu"];
+        int Kelembapan = NodeID_1["Kelembapan"];
+        uint32_t oUnixtime = NodeID_1["Unixtime"];
+        JsonObject NodeID_2 = doc[1];
+        int fNodeID_2 = NodeID_2["NodeID"];
+        int Berat = NodeID_2["Berat"];
+        uint32_t pUnixtime = NodeID_2["Unixtime"];
+        JsonObject NodeID_3 = doc[2];
+        int fNodeID_3 = NodeID_3["NodeID"];
+        int Pitch = NodeID_3["Pitch"];
+        int Roll = NodeID_3["Roll"];
+        int Frekuensi = NodeID_3["Frekuensi"];
+        uint32_t qUnixtime = NodeID_3["Unixtime"];
+        JsonArray jsonarray = doc.to<JsonArray>();
+        JsonObject jsonobject = jsonarray.createNestedObject();
+        jsonobject["NodeID"] = fNodeID_1;
+        jsonobject["Suhu"] = Suhu;
+        jsonobject["Kelembapan"] = Kelembapan;
+        jsonobject["Unixtime"] = oUnixtime;
+        JsonObject jsonobject1 = jsonarray.createNestedObject();
+        jsonobject1["NodeID"] = fNodeID_2;
+        jsonobject1["Berat"] = Berat;
+        jsonobject1["Unixtime"] = pUnixtime;
+        JsonObject jsonobject2 = jsonarray.createNestedObject();
+        jsonobject2["NodeID"] = fNodeID_3;
+        jsonobject2["Pitch"] = Pitch;
+        jsonobject2["Roll"] = Roll;
+        jsonobject2["Frekuensi"] = Frekuensi;
+        jsonobject2["Unixtime"] = qUnixtime;
+        JsonObject jsonobject3 = jsonarray.createNestedObject();
+        jsonobject3["NodeID"] = node_asal;
+        jsonobject3["usX"] = usX;
+        jsonobject3["usY"] = usY;
+        jsonobject3["usZ"] = usZ;
+        jsonobject3["Unixtime"] = now.unixtime();
+        datakirim = "";
+        serializeJson(doc, datakirim);
+        char kirim_loop[datakirim.length() + 1];
+        datakirim.toCharArray(kirim_loop,sizeof(kirim_loop));
+        network.update();
+        RF24NetworkHeader header(/*to node*/ NODE_4);
+        bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+        Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+        if(!NODE_4){
+          digitalWrite(LED_BUILTIN, HIGH);
+          delay(100);
+        }
+        digitalWrite(LED_BUILTIN, LOW);
+      }
+    }
   }
   //pBLEScan->clearResults();   // delete results fromBLEScan buffer to release memory
 }
