@@ -1407,6 +1407,15 @@ void loop() {
           bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
           if(!NODE_3){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_4);
+            bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+            if(!NODE_4){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1417,6 +1426,15 @@ void loop() {
           bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
           if(!NODE_4){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_3);
+            bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+            if(!NODE_3){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1460,6 +1478,15 @@ void loop() {
           bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
           if(!NODE_3){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_4);
+            bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+            if(!NODE_4){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1470,6 +1497,15 @@ void loop() {
           bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
           if(!NODE_4){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_3);
+            bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+            if(!NODE_3){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1517,6 +1553,15 @@ void loop() {
           bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
           if(!NODE_2){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_4);
+            bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+            if(!NODE_4){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1527,6 +1572,15 @@ void loop() {
           bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
           if(!NODE_4){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_2);
+            bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+            if(!NODE_2){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1573,6 +1627,15 @@ void loop() {
           bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
           if(!NODE_2){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_2);
+            bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+            if(!NODE_2){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1583,6 +1646,15 @@ void loop() {
           bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
           if(!NODE_4){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_4);
+            bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+            if(!NODE_4){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1627,6 +1699,15 @@ void loop() {
           bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
           if(!NODE_1){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_4);
+            bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
+            if(!NODE_4){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1637,6 +1718,15 @@ void loop() {
           bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
           if(!NODE_4){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_1);
+            bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1NODE_1") : F("GAGAL TERKIRIM KE NODE 1NODE_1"));
+            if(!NODE_1){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1681,6 +1771,15 @@ void loop() {
           bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
           if(!NODE_1){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_4);
+            bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4NODE_4") : F("GAGAL TERKIRIM KE NODE 4NODE_4"));
+            if(!NODE_4){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1691,6 +1790,15 @@ void loop() {
           bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
           if(!NODE_4){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_1);
+            bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1NODE_1") : F("GAGAL TERKIRIM KE NODE 1NODE_1"));
+            if(!NODE_1){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1739,6 +1847,15 @@ void loop() {
           bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
           if(!NODE_1){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_2);
+            bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2NODE_2") : F("GAGAL TERKIRIM KE NODE 2NODE_2"));
+            if(!NODE_2){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1749,6 +1866,15 @@ void loop() {
           bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
           if(!NODE_2){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_1);
+            bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+            if(!NODE_1){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1797,6 +1923,15 @@ void loop() {
           bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
           if(!NODE_1){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_2);
+            bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2NODE_2") : F("GAGAL TERKIRIM KE NODE 2NODE_2"));
+            if(!NODE_2){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1807,6 +1942,15 @@ void loop() {
           bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
           if(!NODE_2){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_1);
+            bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+            if(!NODE_1){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1851,6 +1995,15 @@ void loop() {
           bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
           if(!NODE_1){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_3);
+            bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+            if(!NODE_3){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1861,6 +2014,15 @@ void loop() {
           bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
           if(!NODE_3){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_1);
+            bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1NODE_1") : F("GAGAL TERKIRIM KE NODE 1NODE_1"));
+            if(!NODE_1){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1905,6 +2067,15 @@ void loop() {
           bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
           if(!NODE_1){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_3);
+            bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+            if(!NODE_3){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1915,6 +2086,15 @@ void loop() {
           bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
           if(!NODE_3){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_1);
+            bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
+            if(!NODE_1){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1961,6 +2141,15 @@ void loop() {
           bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
           if(!NODE_2){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_3);
+            bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+            if(!NODE_3){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -1971,6 +2160,15 @@ void loop() {
           bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
           if(!NODE_3){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_2);
+            bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+            if(!NODE_2){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -2017,6 +2215,15 @@ void loop() {
           bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
           if(!NODE_2){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_3);
+            bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
+            if(!NODE_3){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -2027,6 +2234,15 @@ void loop() {
           bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
           Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
           if(!NODE_3){
+            network.update();
+            RF24NetworkHeader header(/*to node*/ NODE_2);
+            bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
+            Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
+            if(!NODE_2){
+              RF24NetworkHeader header(/*to node*/ NODE_Master);
+              bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+              Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
+            }
             digitalWrite(LED_BUILTIN, HIGH);
             delay(100);
           }
@@ -2084,6 +2300,9 @@ void loop() {
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
         if(!NODE_4){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2136,6 +2355,9 @@ void loop() {
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
         if(!NODE_4){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2188,6 +2410,9 @@ void loop() {
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
         if(!NODE_4){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2240,6 +2465,9 @@ void loop() {
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
         if(!NODE_4){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2292,6 +2520,9 @@ void loop() {
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
         if(!NODE_4){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2344,6 +2575,9 @@ void loop() {
         bool NODE_4 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_4 ? F("DATA TERKIRIM KE NODE 4") : F("GAGAL TERKIRIM KE NODE 4"));
         if(!NODE_4){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2396,6 +2630,9 @@ void loop() {
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
         if(!NODE_3){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2448,6 +2685,9 @@ void loop() {
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
         if(!NODE_3){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2502,6 +2742,9 @@ void loop() {
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
         if(!NODE_1){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2556,6 +2799,9 @@ void loop() {
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
         if(!NODE_1){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2610,6 +2856,9 @@ void loop() {
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
         if(!NODE_1){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2664,6 +2913,9 @@ void loop() {
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
         if(!NODE_1){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2720,6 +2972,9 @@ void loop() {
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
         if(!NODE_2){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2776,6 +3031,9 @@ void loop() {
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
         if(!NODE_2){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2832,6 +3090,9 @@ void loop() {
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
         if(!NODE_2){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2888,6 +3149,9 @@ void loop() {
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
         if(!NODE_2){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2940,6 +3204,9 @@ void loop() {
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
         if(!NODE_3){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -2992,6 +3259,9 @@ void loop() {
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
         if(!NODE_3){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -3044,6 +3314,9 @@ void loop() {
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
         if(!NODE_3){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -3100,6 +3373,9 @@ void loop() {
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
         if(!NODE_2){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -3152,6 +3428,9 @@ void loop() {
         bool NODE_3 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_3 ? F("DATA TERKIRIM KE NODE 3") : F("GAGAL TERKIRIM KE NODE 3"));
         if(!NODE_3){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -3206,6 +3485,9 @@ void loop() {
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
         if(!NODE_1){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -3262,6 +3544,9 @@ void loop() {
         bool NODE_2 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_2 ? F("DATA TERKIRIM KE NODE 2") : F("GAGAL TERKIRIM KE NODE 2"));
         if(!NODE_2){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
@@ -3316,6 +3601,9 @@ void loop() {
         bool NODE_1 = network.write(header, &kirim_loop, sizeof(kirim_loop));
         Serial.println(NODE_1 ? F("DATA TERKIRIM KE NODE 1") : F("GAGAL TERKIRIM KE NODE 1"));
         if(!NODE_1){
+          RF24NetworkHeader header(/*to node*/ NODE_Master);
+          bool NODE_Master = network.write(header, &kirim_loop, sizeof(kirim_loop));
+          Serial.println(NODE_Master ? F("DATA TERKIRIM KE NODE Master") : F("GAGAL TERKIRIM KE NODE Master"));
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
         }
