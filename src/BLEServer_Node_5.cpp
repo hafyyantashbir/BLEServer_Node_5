@@ -158,7 +158,7 @@ void setup() {
   radio.printDetails();  // requires printf support
 
   //fungsi setup BLE
-  BLEDevice::init("NODE_4");
+  BLEDevice::init("NODE_5");
   BLEServer *pServer = BLEDevice::createServer();
   BLEService *pService = pServer ->createService(SERVICE_UUID);
   BLECharacteristic *pCharacteristic = pService->createCharacteristic(
