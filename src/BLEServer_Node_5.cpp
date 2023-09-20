@@ -241,7 +241,7 @@ void loop() {
       JsonObject jsonobject = jsonarray.createNestedObject();
       jsonobject["NodeID"] = node_asal;
       jsonobject["usX"] = usX;
-      jsonobject["usY"] = usZ;
+      jsonobject["usY"] = usY;
       jsonobject["usZ"] = usZ;
       jsonobject["Unixtime"] = now.unixtime();
       datakirim = "";
@@ -259,7 +259,7 @@ void loop() {
           JsonObject jsonobject = jsonarray.createNestedObject();
           jsonobject["NodeID"] = node_asal;
           jsonobject["usX"] = usX;
-          jsonobject["usY"] = usZ;
+          jsonobject["usY"] = usY;
           jsonobject["usZ"] = usZ;
           jsonobject["Unixtime"] = now.unixtime();
           JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -280,7 +280,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -305,7 +305,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -335,7 +335,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -378,7 +378,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -408,7 +408,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -453,7 +453,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -480,7 +480,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -510,7 +510,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -553,7 +553,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -585,7 +585,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -630,7 +630,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -657,7 +657,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -687,7 +687,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -730,7 +730,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -762,7 +762,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -811,7 +811,7 @@ void loop() {
           JsonObject jsonobject = jsonarray.createNestedObject();
           jsonobject["NodeID"] = node_asal;
           jsonobject["usX"] = usX;
-          jsonobject["usY"] = usZ;
+          jsonobject["usY"] = usY;
           jsonobject["usZ"] = usZ;
           jsonobject["Unixtime"] = now.unixtime();
           JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -831,7 +831,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -856,7 +856,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -886,7 +886,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -929,7 +929,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -959,7 +959,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1004,7 +1004,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1030,7 +1030,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1060,7 +1060,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1103,7 +1103,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1134,7 +1134,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1179,7 +1179,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1205,7 +1205,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1235,7 +1235,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1278,7 +1278,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1309,7 +1309,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1358,7 +1358,7 @@ void loop() {
           JsonObject jsonobject = jsonarray.createNestedObject();
           jsonobject["NodeID"] = node_asal;
           jsonobject["usX"] = usX;
-          jsonobject["usY"] = usZ;
+          jsonobject["usY"] = usY;
           jsonobject["usZ"] = usZ;
           jsonobject["Unixtime"] = now.unixtime();
           JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1380,7 +1380,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1407,7 +1407,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1437,7 +1437,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1480,7 +1480,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1512,7 +1512,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1557,7 +1557,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1583,7 +1583,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1613,7 +1613,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1656,7 +1656,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1683,7 +1683,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1724,7 +1724,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1752,7 +1752,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1784,7 +1784,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1827,7 +1827,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1858,7 +1858,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1907,7 +1907,7 @@ void loop() {
           JsonObject jsonobject = jsonarray.createNestedObject();
           jsonobject["NodeID"] = node_asal;
           jsonobject["usX"] = usX;
-          jsonobject["usY"] = usZ;
+          jsonobject["usY"] = usY;
           jsonobject["usZ"] = usZ;
           jsonobject["Unixtime"] = now.unixtime();
           JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1929,7 +1929,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1956,7 +1956,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -1986,7 +1986,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2029,7 +2029,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2061,7 +2061,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2106,7 +2106,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2132,7 +2132,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2162,7 +2162,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2205,7 +2205,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2236,7 +2236,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2281,7 +2281,7 @@ void loop() {
               JsonObject jsonobject = jsonarray.createNestedObject();
               jsonobject["NodeID"] = node_asal;
               jsonobject["usX"] = usX;
-              jsonobject["usY"] = usZ;
+              jsonobject["usY"] = usY;
               jsonobject["usZ"] = usZ;
               jsonobject["Unixtime"] = now.unixtime();
               JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2309,7 +2309,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2341,7 +2341,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2384,7 +2384,7 @@ void loop() {
                   JsonObject jsonobject = jsonarray.createNestedObject();
                   jsonobject["NodeID"] = node_asal;
                   jsonobject["usX"] = usX;
-                  jsonobject["usY"] = usZ;
+                  jsonobject["usY"] = usY;
                   jsonobject["usZ"] = usZ;
                   jsonobject["Unixtime"] = now.unixtime();
                   JsonObject jsonobject1 = jsonarray.createNestedObject();
@@ -2415,7 +2415,7 @@ void loop() {
                     JsonObject jsonobject = jsonarray.createNestedObject();
                     jsonobject["NodeID"] = node_asal;
                     jsonobject["usX"] = usX;
-                    jsonobject["usY"] = usZ;
+                    jsonobject["usY"] = usY;
                     jsonobject["usZ"] = usZ;
                     jsonobject["Unixtime"] = now.unixtime();
                     JsonObject jsonobject1 = jsonarray.createNestedObject();
