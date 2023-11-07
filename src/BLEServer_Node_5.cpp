@@ -117,13 +117,11 @@ void loop() {
   // Mengirim data ke master
   if (millis() - currentMillis >= 1000) {
     currentMillis = millis();
-    JsonArray jsonarray = doc.to<JsonArray>();
-    JsonObject jsonobject = jsonarray.createNestedObject();
-    jsonobject["NodeID"] = node_asal;
-    jsonobject["usX"] = usX;
-    jsonobject["usY"] = usY;
-    jsonobject["usZ"] = usZ;
-    jsonobject["Unixtime"] = now.unixtime();
+    doc["NodeID"] = node_asal;
+    doc["usX"] = usX;
+    doc["usY"] = usY;
+    doc["usZ"] = usZ;
+    doc["Unixtime"] = now.unixtime();
     datakirim = "";
     serializeJson(doc, datakirim);
     char kirim_loop[datakirim.length() + 1];
