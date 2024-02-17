@@ -26,7 +26,7 @@
 #define ECHO3    26
 
 //konfigurasi stack size
-SET_LOOP_TASK_STACK_SIZE(64*1024); // 64KB
+SET_LOOP_TASK_STACK_SIZE(32*1024); // 64KB
 
 //konfigurasi RTC
 RTC_DS3231 rtc;
@@ -43,97 +43,20 @@ uint8_t dataBuffer[MAX_PAYLOAD_SIZE];  //MAX_PAYLOAD_SIZE is defined in RF24Netw
 
 //variabel DATA
 int node_asal = 5;
-unsigned long usX = 2; // data us sumbu X
-unsigned long usY = 4; // data us sumbu Y
-unsigned long usZ = 6; // data us sumbu Z
+unsigned long usX; // data us sumbu X
+unsigned long usY; // data us sumbu Y
+unsigned long usZ; // data us sumbu Z
 String datakirim;
 
 //variabel millis
 unsigned long currentMillis = 0;
 
 //Fungsi untuk 2 loop
-//TaskHandle_t Task1;
+TaskHandle_t Task1;
 
 //program loop 2
-//void loop2( void * parameter) {
-//  for (;;) {
-//    unsigned long currentTime = millis(); // Waktu saat ini
-//
-//    if (currentTime - previousTime >= intervalmillis) {
-//      previousTime = currentTime; // Perbarui waktu sebelumnya
-//      Serial.println("MODE : SCANNING......");
-//      BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
-//      Serial.print("RSSI NODE 1 : " + String(NODE_1_RSSI));
-//      Serial.println(" || RSSI NODE 2 : " + String(NODE_2_RSSI));
-//    }
-//  }
-//}
-
-void setup() {
-  Serial.begin(115200);
-
-  pinMode(TRIGGER1, OUTPUT);
-  pinMode(ECHO1, INPUT);
-  pinMode(TRIGGER2, OUTPUT);
-  pinMode(ECHO2, INPUT);
-  pinMode(TRIGGER3, OUTPUT);
-  pinMode(ECHO3, INPUT);
-
-  //Fungsi untuk 2 loop
-  //  xTaskCreatePinnedToCore(
-  //    loop2,
-  //    "BLE_SCANNING",
-  //    1000,
-  //    NULL,
-  //    1,
-  //    &Task1,
-  //    0);
-
-  if (! rtc.begin()) {
-    Serial.println("Tidak dapat menemukan RTC! Periksa sirkuit.");
-    while (1);
-  }
-
-  while (!Serial) {
-    // some boards need this because of native USB capability
-  }
-  mesh.setNodeID(this_node);
-  Serial.println(F("Menghubungkan ke jaringan..."));
-
-  if (!mesh.begin()){
-    if (radio.isChipConnected()){
-      do {
-        // mesh.renewAddress() will return MESH_DEFAULT_ADDRESS on failure to connect
-        Serial.println(F("Gagal terhubung ke jaringan.\nMenghubungkan ke jaringan..."));
-      } while (mesh.renewAddress() == MESH_DEFAULT_ADDRESS);
-    } else {
-      Serial.println(F("NRF24L01 tidak merespon."));
-      while (1) {
-        // hold in an infinite loop
-      }
-    }
-  }
-  printf_begin();
-  radio.printDetails();  // print detail konfigurasi NRF24L01
-
-  // print memori stack keseluruhan
-  Serial.printf("ESP32 Stack was set to %d bytes", getArduinoLoopTaskStackSize());
-  // print sisa memori stack pada void setup
-  Serial.printf("\nSetup() - Free Stack Space: %d", uxTaskGetStackHighWaterMark(NULL));
-}
-
-void loop() {
-  // print sisa memori stack pada void loop
-  Serial.printf("\nLoop() - Free Stack Space: %d", uxTaskGetStackHighWaterMark(NULL));
-  
-  mesh.update();
-  DateTime now = rtc.now();
-  StaticJsonDocument<128> doc;
-
-  // Mengirim data ke master
-  if (millis() - currentMillis >= 1000) {
-    currentMillis = millis();
-    
+void bacasensor( void * parameter) {
+ for (;;) {
     //sumbu X
     long duration1;
     long distance1;
@@ -169,6 +92,74 @@ void loop() {
     duration3 = pulseIn(ECHO3, HIGH);
     distance3 = duration3 * 0.34 / 2;
     usZ = distance3;
+    Serial.println("Running on Core : "+String(xPortGetCoreID())+", US X : "+String(usX)+", US Y : "+String(usY)+", US Z : "+String(usZ));
+ }
+}
+
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(TRIGGER1, OUTPUT);
+  pinMode(ECHO1, INPUT);
+  pinMode(TRIGGER2, OUTPUT);
+  pinMode(ECHO2, INPUT);
+  pinMode(TRIGGER3, OUTPUT);
+  pinMode(ECHO3, INPUT);
+
+  if (! rtc.begin()) {
+    Serial.println("Tidak dapat menemukan RTC! Periksa sirkuit.");
+    while (1);
+  }
+
+  while (!Serial) {
+    // some boards need this because of native USB capability
+  }
+  mesh.setNodeID(this_node);
+  Serial.println(F("Menghubungkan ke jaringan..."));
+
+  if (!mesh.begin()){
+    if (radio.isChipConnected()){
+      do {
+        // mesh.renewAddress() will return MESH_DEFAULT_ADDRESS on failure to connect
+        Serial.println(F("Gagal terhubung ke jaringan.\nMenghubungkan ke jaringan..."));
+      } while (mesh.renewAddress() == MESH_DEFAULT_ADDRESS);
+    } else {
+      Serial.println(F("NRF24L01 tidak merespon."));
+      while (1) {
+        // hold in an infinite loop
+      }
+    }
+  }
+  printf_begin();
+  radio.printDetails();  // print detail konfigurasi NRF24L01
+
+  //Fungsi untuk 2 loop
+   xTaskCreatePinnedToCore(
+     bacasensor,    /* Task function. */
+     "baca_sensor", /* name of task. */
+     32768,         /* Stack size of task */
+     NULL,          /* parameter of the task */
+     1,             /* priority of the task */
+     &Task1,        /* Task handle to keep track of created task */
+     0);            /* pin task to core 0 */
+
+  // print memori stack keseluruhan
+  Serial.printf("ESP32 Stack was set to %d bytes", getArduinoLoopTaskStackSize());
+  // print sisa memori stack pada void setup
+  Serial.printf("\nSetup() - Free Stack Space: %d", uxTaskGetStackHighWaterMark(NULL));
+}
+
+void loop() {
+  // print sisa memori stack pada void loop
+  Serial.printf("\nLoop() - Free Stack Space: %d", uxTaskGetStackHighWaterMark(NULL));
+  
+  mesh.update();
+  DateTime now = rtc.now();
+  StaticJsonDocument<128> doc;
+
+  // Mengirim data ke master
+  if (millis() - currentMillis >= 250) {
+    currentMillis = millis();
 
     doc["NodeID"] = String(node_asal);
     doc["usX"] = String(usX);
